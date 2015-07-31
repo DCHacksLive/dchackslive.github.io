@@ -12,7 +12,7 @@
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
@@ -29,114 +29,23 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="icon.png">
-      <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script>
-    $( document ).ready(function() {
-      var f = window.location.search.substring(4)
-      var name;
-      var description;
-      var timeslot;
-      var instructors
-      var level;
-      console.log(parseInt(f))
-      switch(parseInt(f)) {
-        case 1:
-          name = "Microsoft Azure Workshop"
-          description = "Learn about Microsoft Azure, an open, flexible, enterprise-grade cloud computing platform, and how you can win 4 Dell Venue Pro tablets for your team!"
-          timeslot =  "2.30pm to 3.30pm (1 hour)"
-          instructors = "Amanda Lange and James Quick"
-          level = "Everyone"
-          break;
-        case 2:
-          name = "Introduction to Android Workshop #1"
-          description = "An introduction to programming and building your own Android application!"
-          timeslot = "3.30pm to 4.15pm (45 minutes)"
-          instructors = "Jeroen Goossens"
-          level = "Beginner"
-          break;
-        case 3:
-          name = "Introduction to Agile Development Workshop #1"
-          description = "Learn about Agile software development, a group of software development methods in which requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change."
-          timeslot = "3.30pm to 4pm (30 minutes)"
-          instructors = "Peter Wilding"
-          level = "Beginner"
-          break;
-        case 4:
-          name = "Introduction to HTML/CSS and Javascript Workshop"
-          description = "An introductory web development workshop for students who have never done any programming before. Learn how to create your own simple website!"
-          timeslot = "4pm to 4.45pm (45 minutes)"
-          instructors = "Sayan Paul"
-          level = "Beginner"
-          break;
-        case 5:
-          name = "Young Women in Computer Science"
-          description = "Learn about and discuss the gender gap in computer science and what organizations, men, and women can do to reduce it."
-          timeslot = "4.15pm to 5pm (45 minutes)"
-          instructors = "Ria Chakrabarti"
-          level = "Everyone"
-          break;
-        case 6:
-          name = "Introduction to MongoDB Workshop"
-          description = "Learn how to use MongoDB in your own web app!"
-          timeslot = "5pm to 5.45pm (45 minutes)"
-          instructors = "Eric Woods and Nikhil Pasupukuntla"
-          level = "Beginner"
-          break;
-        case 7:
-          name = "Tools for Natural Language Processing Workshop"
-          description = "NLP is a field in computer science that focuses on taking natural language (sentences and phrases humans use) and turning it into something computers can manipulate. The applications range from chatbots to voice control to figuring out which author you sound like based on your Facebook posts. We'll start with an introduction to some basic NLP concepts like tokenization, tagging, and parsing and then walk through some examples with freely available toolkits that can help you use NLP in your projects. (Familiarity with Python is good, but no prior knowledge of NLP necessary.)"
-          timeslot = "5.45pm to 6.30pm (45 minutes)"
-          instructors = "Beth McNany"
-          level = "Intermediate"
-          break;
-        case 8:
-          name = "Bootstrap Basics Workshop"
-          description = "Learn the ins and outs of website creation and Bootstrap, a popular HTML, CSS, and JavaScript framework for developing responsive projects for web and mobile!"
-          timeslot = "6.45pm to 7.30pm (45 minutes)"
-          instructors = "Men Cheol Jeong"
-          level = "Beginner"
-          break;
-        case 9:
-          name = "App Development in the Cloud with Cloud9 IDE"
-          description = "Learn how to develop applications in the cloud using Cloud9’s free browser-based IDE."
-          timeslot = "8.30pm to 9pm (30 minutes)"
-          instructors = "Oak Chantosa"
-          level = "Intermediate"
-          break;
-        case 10: 
-          name = "Introduction to Agile Development Workshop #2"
-          description = "Learn about Agile software development, a group of software development methods in which requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change."
-          timeslot =  "8.30pm to 9pm (30 minutes)"
-          instructors =  "Ulises Giacoman"
-          level = "Beginner"
-          break;
-        case 11:
-          name = "Introduction to Rails Development Workshop"
-          description = "Learn how to create your own blog application with Ruby on Rails!"
-          timeslot =  "9pm to 9.45pm (45 minutes)"
-          instructors = "Anuraag Yachamaneni"
-          level = "Intermediate"
-          break;
-        case 12:
-          name = "Introduction to Android Workshop #2"
-          description = "An introduction to programming and building your own Android application!"
-          timeslot =  "9pm to 9.45pm (45 minutes)"
-          instructors = "Joseph Brosnihan"
-          level = "Beginner"
-          break;
-      }
-      $("#name").text(name)
-      $("#time").text(timeslot)
-      $("#presenter").text(instructors)
-      $("#description").text(description)
-      $("#level").text(level) 
-    });
+      $( document ).ready(function() {
+          
+      });
+
+
     </script>
-     <style>
+    <style>
     a {
       color:white;
     }
@@ -226,27 +135,26 @@
           </ul>
         </section>
       </aside>
+
       <div class="content-wrapper">
         <section class="content">
-        <div class="page-header">
-          <h1 id="name"></h1>
-          <p id="level"></p>
-          <p id="time" style="font-size:20px"></p>
-          <p id="presenter"></p>
-          <p id="location"></p>
-          <p id="description"></p>
-        </div>
-          <div class="row">
-
+          <div class="row" style="margin-left:10px; margin-right:10px">
+            <object id="swag" data="cvent.pdf" type="application/pdf" class="col-md-12" style="height:90vh">
+                alt : <a href="test.pdf">cvent.pdf</a>
+            </object>
           </div><!-- ./col -->
         </section><!-- /.content -->
       </div>
-
+      <script>
+      // $("#swag").width  = 
+      </script>
     
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 
-  
+    <!-- jQuery 2.1.4 -->
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script type="text/javascript">
       $.widget.bridge('uibutton', $.ui.button);
@@ -281,4 +189,5 @@
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js" type="text/javascript"></script>
   </body>
+  
 </html>
