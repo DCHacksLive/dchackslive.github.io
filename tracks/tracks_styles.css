@@ -1,9 +1,11 @@
 #header,
+#sub-header,
 .info-item {
   width: 100%;
   padding: 10px;
 }
-.info-item, .short-descr{
+.info-item,
+.short-descr {
   margin-left: 20px;
 }
 .res-link {
