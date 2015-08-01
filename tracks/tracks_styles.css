@@ -1,0 +1,13 @@
+#header,
+.info-item {
+  width: 100%;
+  padding: 10px;
+}
+.info-item, .short-descr{
+  margin-left: 20px;
+}
+.res-link {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
